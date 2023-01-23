@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Stel_Cross_Platform.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="0,0,0,0"
+            Margin="10">
+
+
+            <StackLayout >
+                <Slider x:Name="Slider" Maximum="10000"
+            ValueChanged="Slider_OnValueChanged" Minimum="4000" Value="5000" />
+                <Label x:Name="displayLabel"
+           Text="(uninitialized)"
+           HorizontalOptions="Center"
+           VerticalOptions="Center" />
+            </StackLayout>
+
+            <Entry x:Name="textbox" Text="09999"  Keyboard="Numeric" Placeholder="Enter Number" />
+
+            <StackLayout >
+                <Label x:Name="Labelok" Text="Sent: 0" />
+            <Label x:Name="Labelnotok" Text="not sent: 0" />
+            </StackLayout>
+
+
+
+            <StackLayout Margin="20,0,20,25">
+
+
+                <Button
+                x:Name="CounterBtn"
+                Text="Ready"
+                SemanticProperties.Hint="han?"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center" />
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
